@@ -1,7 +1,8 @@
-from rest_framework import serializers
 import base64
+
 from django.core.files.base import ContentFile
-from posts.models import Comment, Group, Post, Follow, User
+from posts.models import Comment, Follow, Group, Post, User
+from rest_framework import serializers
 
 
 class Base64ImageField(serializers.ImageField):
