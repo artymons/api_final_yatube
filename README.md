@@ -1,27 +1,39 @@
-Yatube api
+# Проект Yatube(api)
 
-api соц сеть
+## Описание
 
-Как запустить проект:
-Клонировать репозиторий и перейти в него в командной строке:
+Api для портала блогеров Yatube 
 
-git clone https://github.com/artymons/api_final_yatube.git
-cd api_final_yatube
-Cоздать и активировать виртуальное окружение:
 
-python -m venv env
+## Установка
+
+1. Клонировать репозиторий
+
+2. Cоздать и активировать виртуальное окружение:
+```
+python3 -m venv env
 source env/bin/activate
-Установить зависимости из файла requirements.txt:
+```
 
-python -m pip install --upgrade pip
+3. Установить зависимости из файла requirements.txt:
+```
+python3 -m pip install --upgrade pip
 pip install -r requirements.txt
-Выполнить миграции:
+```
+4. Выполнить миграции:
+```
+python3 manage.py migrate
+```
 
-python manage.py migrate
+5. Запустить проект:
+```
+python3 manage.py runserver
+```
 
-Запустить проект:
+## Примеры запросов
 
-python manage.py runserver
+Получить список всех постов
+/api/v1/posts/
 
-Использование
-Получить список всех публикаций. Get /api/v1/posts/
+Получить пост по id
+/api/v1/posts/{id}/
